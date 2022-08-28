@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.container{
+    padding: 15px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+fieldset{
+    border: 3px solid #667eea;
+}
+legend{
+    border: 1px solid #667eea;
+    text-align: center;
+    background: #667eea;
+    padding: 8px;
+    border-radius: 15px;
+}
+.inputBox, .dataBox{
+    padding: 10px;
+    gap: 20px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+.imputData{
+    max-width: 150px;
+}
+.inputUser{
+    border: none;
+    background: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+.inputLabel{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.inputUser:focus ~ .inputLabel, .inputUser:valid ~ .inputLabel{
+    top: -6px;
+    font-size: 12px;
+    color: #667eea;
+}
+.submitBox{
+    justify-content: center;
+}
+.submitButton{
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 50px;
+    font-size: 1.25rem;
+    position: relative;
+    margin: 10px;
+}
+.submitButton::after, .submitButton::before{
+    border: 3px solid #667eea;
+    content:"";
+    position: absolute;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    left: 0;
+    bottom: 0;
+    transition: transform 0.3s ease;
+}
+.submitButton:hover::after{
+    box-shadow: 0px 0px 20px #667eea;
+    transform: translate(-5px, -5px);
+}
+.submitButton:hover::before{
+    box-shadow: 0px 0px 20px #667eea;
+    transform: translate(5px, 5px);
+}
